@@ -8,7 +8,7 @@ archivo = st.file_uploader("Sube tu archivo Excel", type=["xlsx"])
 
 if archivo:
 
-    df = pd.read_excel(archivo)
+    df = pd.read_excel(archivo, engine="openpyxl")
     df.columns = df.columns.str.strip()
 
     # =========================
